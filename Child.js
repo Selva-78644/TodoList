@@ -35,15 +35,16 @@ function Child() {
 
   return (
     // <div className="App">
-    <div class="container"style={{backgroundColor:"lightpink",borderRadius:"25px",padding:"100px",height:"50vh",marginTop:"80px",marginLeft:"300px",width:"700px",justifyContent:"center",alignItems:"center"}}>
-      <h2 style={{ color: 'black',borderRadius:"50px", fontSize: 50 ,backgroundColor: 'grey',marginLeft:"70px",paddingRight:"50px",height: '80px', width: '500px',textAlign:'center',marginBottom:"50px" }}>Todo List</h2>
+    <div class="container"style={{borderRadius:"25px",padding:"100px",height:"50vh",marginTop:"80px",marginLeft:"300px",width:"700px",justifyContent:"center",alignItems:"center"}}>
+      <h2 style={{ color: 'black',borderRadius:"9999px", fontSize: 66 ,backgroundColor: 'violet',marginLeft:"28px",paddingRight:"50px",height: '80px', width: '500px',textAlign:'center',marginBottom:"50px" }}>Todo List</h2>
       <input
         style={{
           justifyContent:'center',
           textAlign:'center',
           width: '500px',
           height: '30px',
-          borderRadius:"50px"
+          borderRadius:"50px",
+          fontSize: '28px',
           
         }
         }
@@ -51,7 +52,7 @@ function Child() {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}></input>
       
-      <button onClick={addTodo} style={{width: '150px', marginLeft:"20px",borderRadius:"50px",height: '30px',marginTop:"50px", backgroundColor: 'green', justifyContent: 'center'}}>Add Todo</button>
+      <button onClick={addTodo} style={{width: '150px',height: '150px', marginLeft:"20px",borderRadius:"50px",height: '30px',marginTop:"50px", backgroundColor: 'green', justifyContent: 'center'}}>Add Todo</button>
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
@@ -63,7 +64,7 @@ function Child() {
                   onChange={(e) => setEditedTodo(e.target.value)}
                   style={{borderRadius:"50px"}}
                 />
-                <button onClick={() => handleEditSave(index)}style={{background:"aqua",width:"100px",marginLeft:"10px",borderRadius:"50px"}}>Save</button>
+                <button onClick={() => handleEditSave(index)}style={{background:"aqua",width:"100px",height:'100',marginLeft:"10px",borderRadius:"50px"}}>Save</button>
               </>
             ) : (
               <>
@@ -82,3 +83,4 @@ function Child() {
 }
 
 export default Child;
+
